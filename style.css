@@ -1,8 +1,8 @@
-/* 全局样式 */
+/* 全局樣式 */
 :root {
-    --primary-color: #003366; /* 深蓝色 - 代表专业与信任 */
-    --secondary-color: #CC0000; /* 红色点缀 - 香港/中国元素或警示 */
-    --accent-color: #FFCC00; /* 金色点缀 - 香港特色 */
+    --primary-color: #003366; /* 深藍色 - 代表專業與信任 */
+    --secondary-color: #CC0000; /* 紅色點綴 - 香港/中國元素或警示 */
+    --accent-color: #FFCC00; /* 金色點綴 - 香港特色 */
     --light-bg: #f9f9f9;
     --dark-text: #333;
     --light-text: #fff;
@@ -22,7 +22,7 @@ body {
     background-color: #fff;
 }
 
-/* 导航栏 */
+/* 導航欄 */
 .navbar {
     background: var(--primary-color);
     padding: 1rem 0;
@@ -38,12 +38,28 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
     padding: 0 20px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.nav-logo-img {
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+    object-fit: contain;
 }
 
 .nav-logo h1 {
     color: var(--light-text);
     font-size: 1.5rem;
+    line-height: 1.15;
 }
 
 .nav-logo span {
@@ -58,7 +74,8 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1.4rem;
+    flex-shrink: 0;
 }
 
 .nav-menu a {
@@ -73,9 +90,10 @@ body {
     color: var(--accent-color);
 }
 
-/* 首屏大图 */
+/* 首屏大圖 */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x800/111/333?text=Logistics+Background') no-repeat center center/cover;
+    position: relative;
+    overflow: hidden;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -83,10 +101,30 @@ body {
     color: var(--light-text);
 }
 
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: -20px;
+    background: url('image/image04.webp') no-repeat center center/cover;
+    filter: blur(0px);
+    transform: scale(1.04);
+    z-index: 0;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.58);
+    z-index: 1;
+}
+
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-content h2 {
@@ -135,10 +173,180 @@ body {
     background-color: rgba(255,255,255,0.1);
 }
 
-/* 核心优势 */
-.features {
+/* 公司簡介 */
+.about {
+    padding: 5rem 2rem;
+    background-color: #fff;
+    scroll-margin-top: 90px;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-copy h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.about-copy p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.about-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.about-gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: block;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* 服務範圍 */
+.services {
     padding: 5rem 2rem;
     background-color: var(--light-bg);
+    scroll-margin-top: 90px;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    max-width: 760px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.section-heading h3,
+.warehouse-copy h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.section-heading p,
+.warehouse-copy p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.service-card {
+    background: white;
+    padding: 1.8rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+}
+
+.service-card i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.service-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+
+.service-card p {
+    color: #555;
+}
+
+/* 倉儲實力 */
+.warehouse-strength {
+    padding: 5rem 2rem;
+    background: white;
+    scroll-margin-top: 90px;
+}
+
+.warehouse-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.95fr);
+    gap: 3rem;
+    align-items: center;
+}
+
+.warehouse-image img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.warehouse-list {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.warehouse-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.9rem;
+    color: #444;
+}
+
+.warehouse-list i {
+    color: var(--secondary-color);
+    margin-top: 0.25rem;
+}
+
+.warehouse-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.warehouse-stats div {
+    padding: 1rem;
+    border-left: 4px solid var(--accent-color);
+    background: var(--light-bg);
+}
+
+.warehouse-stats strong,
+.warehouse-stats span {
+    display: block;
+}
+
+.warehouse-stats strong {
+    font-size: 1.35rem;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.warehouse-stats span {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* 核心優勢 */
+.features {
+    padding: 5rem 2rem;
+    background-color: #fff;
     text-align: center;
 }
 
@@ -180,7 +388,7 @@ body {
     color: var(--dark-text);
 }
 
-/* 服务流程 */
+/* 服務流程 */
 .process {
     padding: 5rem 2rem;
     background-color: white;
@@ -203,7 +411,7 @@ body {
     position: relative;
 }
 
-/* 连接线 (仅桌面端显示效果好) */
+/* 連接線（僅桌面端顯示效果好） */
 .steps::before {
     content: '';
     position: absolute;
@@ -244,7 +452,7 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* 页脚 */
+/* 頁腳 */
 footer {
     background: #1a1a1a;
     color: #999;
@@ -294,10 +502,28 @@ footer {
     font-size: 0.9rem;
 }
 
-/* 响应式设计 */
+/* 響應式設計 */
 @media (max-width: 768px) {
     .hero-content h2 {
         font-size: 2.2rem;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-grid,
+    .warehouse-container {
+        grid-template-columns: 1fr;
+    }
+
+    .warehouse-stats {
+        grid-template-columns: 1fr;
     }
     
     .nav-menu {
@@ -317,5 +543,11 @@ footer {
 
     .steps::before {
         display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-gallery {
+        grid-template-columns: 1fr;
     }
 }

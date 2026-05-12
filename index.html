@@ -1,136 +1,237 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-HK">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANDA Logistics - 香港专业电子元件运输服务商</title>
+    <title>安達實業(香港)有限公司 - 香港專業電子元件運輸服務商</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome 图标库 (用于核心优势图标) -->
+    <!-- Font Awesome 圖標庫（用於核心優勢圖標） -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- 导航栏 -->
+    <!-- 導航欄 -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h1>ANDA <span>LOGISTICS</span></h1>
-                <p>香港总部 | 电子元件专业运输</p>
+                <img src="favicon.ico" alt="安達實業 logo" class="nav-logo-img">
+                <div class="nav-logo-text">
+                    <h1>安達實業(香港)有限公司</h1>
+                    <h1>ANDA <span>INDUSTRIAL</span></h1>
+                    <p>香港總部 | 電子元件專業運輸</p>
+                </div>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home">首页</a></li>
-                <li><a href="#services">服务项目</a></li>
-                <li><a href="#solutions">运输方案</a></li>
-                <li><a href="#resources">资源中心</a></li>
-                <li><a href="#about">关于我们</a></li>
-                <li><a href="#contact">立即咨询</a></li>
+                <li><a href="#home">首頁</a></li>
+                <li><a href="#about">公司簡介</a></li>
+                <li><a href="#services">服務範圍</a></li>
+                <li><a href="#warehouse">倉儲實力</a></li>
+                <li><a href="#process">運輸流程</a></li>
+                <li><a href="#contact">聯絡我們</a></li>
             </ul>
-            <div class="nav-lang">
+            <!-- <div class="nav-lang">
                 <select>
-                    <option>中文 (简体)</option>
+                    <option>中文（繁體）</option>
                     <option>English</option>
                 </select>
-            </div>
+            </div> -->
         </div>
     </nav>
 
-    <!-- 首屏大图 (Hero Section) -->
+    <!-- 首屏大圖（Hero Section） -->
     <header id="home" class="hero">
         <div class="hero-content">
-            <h2>精准运输 · 安全交付</h2>
-            <p>ANDA Logistics 是香港领先的电子元件物流服务商。我们拥有 <strong>16年+</strong> 的行业经验，专为半导体、PCB及精密电子组件提供从香港到全球的端到端运输解决方案。</p>
+            <h2>精準運輸 · 安全交付</h2>
+            <p>ANDA Logistics 是香港領先的電子元件物流服務商。我們擁有 <strong>16年+</strong> 的行業經驗，專為半導體、PCB及精密電子組件提供從香港到全球的端到端運輸解決方案。</p>
             <div class="hero-buttons">
-                <a href="#quote" class="btn-primary">获取免费报价</a>
-                <a href="#process" class="btn-secondary">查看运输流程</a>
+                <a href="#contact" class="btn-primary">獲取免費報價</a>
+                <a href="#process" class="btn-secondary">查看運輸流程</a>
             </div>
         </div>
     </header>
 
-    <!-- 核心优势 -->
+    <!-- 公司簡介 -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-copy">
+                <h3>公司簡介</h3>
+                <p>安達實業(香港)有限公司</p>
+                <p>我們專注電子零件倉儲管理與香港本地配送，提供安全收貨、分類存放、庫存協同及準時派送服務，助力客戶高效周轉。</p>
+            </div>
+            <div class="about-gallery">
+                <img src="image/image01.webp" alt="公司名稱展示">
+                <img src="image/image02.webp" alt="電子零件倉儲環境">
+                <img src="image/image03.webp" alt="倉儲作業現場">
+                <img src="image/image04.webp" alt="電子零件存放">
+                <img src="image/image05.webp" alt="本港配送準備">
+                <img src="image/image06.webp" alt="物流操作細節">
+                <img src="image/image07.webp" alt="倉庫貨架">
+                <img src="image/image08.webp" alt="配送車輛與貨物">
+                <img src="image/image09.webp" alt="公司服務場景">
+            </div>
+        </div>
+    </section>
+
+    <!-- 服務範圍 -->
+    <section class="services" id="services">
+        <div class="section-container">
+            <div class="section-heading">
+                <h3>服務範圍</h3>
+                <p>圍繞電子零件流轉需求，提供從入倉、管理到本港派送的一站式支援。</p>
+            </div>
+            <div class="service-grid">
+                <div class="service-card">
+                    <i class="fas fa-warehouse"></i>
+                    <h4>電子零件倉儲</h4>
+                    <p>按客戶、批次及品類分類存放，方便後續查找、出庫與配送安排。</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-boxes-stacked"></i>
+                    <h4>收貨與分貨</h4>
+                    <p>協助核對來貨資料，整理箱件、標籤及包裝狀態，減少交收差錯。</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h4>庫存協同</h4>
+                    <p>配合客戶記錄入庫、出庫及餘量資訊，讓零件週轉更清晰可控。</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tags"></i>
+                    <h4>貼標與整理</h4>
+                    <p>按客戶要求處理外箱標籤、貨品識別及配送資料，方便快速派送。</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-truck"></i>
+                    <h4>香港本地配送</h4>
+                    <p>覆蓋本港主要工商區及工廠客戶，支援小批量、多批次配送需求。</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-bolt"></i>
+                    <h4>加急派送安排</h4>
+                    <p>針對急件及指定時段交付需求，靈活安排人手與車輛銜接。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 倉儲實力 -->
+    <section class="warehouse-strength" id="warehouse">
+        <div class="section-container warehouse-container">
+            <div class="warehouse-image">
+                <img src="image/image02.webp" alt="電子零件倉庫貨架">
+            </div>
+            <div class="warehouse-copy">
+                <h3>倉儲實力</h3>
+                <p>我們以清晰分類、妥善存放及快速出庫為核心，為電子零件客戶提供穩定可靠的倉儲與本港配送銜接。</p>
+                <ul class="warehouse-list">
+                    <li><i class="fas fa-check"></i> 分區存放電子零件、箱件及客戶指定貨品</li>
+                    <li><i class="fas fa-check"></i> 支援批次管理、標籤識別及出入庫記錄</li>
+                    <li><i class="fas fa-check"></i> 配合本港派送時效，快速完成備貨與交接</li>
+                    <li><i class="fas fa-check"></i> 重視貨品安全、整潔存放及交付準確度</li>
+                </ul>
+                <div class="warehouse-stats">
+                    <div>
+                        <strong>16年+</strong>
+                        <span>行業經驗</span>
+                    </div>
+                    <div>
+                        <strong>本港</strong>
+                        <span>快速配送</span>
+                    </div>
+                    <div>
+                        <strong>多批次</strong>
+                        <span>靈活處理</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心優勢 -->
     <section class="features">
         <div class="features-container">
-            <h3>为什么选择 ANDA 物流？</h3>
+            <h3>為什麼選擇 ANDA 物流？</h3>
             <div class="feature-grid">
                 <div class="feature-card">
                     <i class="fas fa-shield-alt"></i>
-                    <h4>全程防静电保护</h4>
-                    <p>专用车辆与包装，确保敏感电子元件在运输中免受静电干扰，安全无忧。</p>
+                    <h4>全程防靜電保護</h4>
+                    <p>專用車輛與包裝，確保敏感電子元件在運輸中免受靜電干擾，安全無憂。</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-temperature-high"></i>
-                    <h4>温控运输</h4>
-                    <p>针对特殊化学品及元件，提供恒温及冷链运输服务，符合国际标准。</p>
+                    <h4>溫控運輸</h4>
+                    <p>針對特殊化學品及元件，提供恆溫及冷鏈運輸服務，符合國際標準。</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-plane"></i>
-                    <h4>香港直飞专线</h4>
-                    <p>依托香港国际枢纽优势，提供极速空运及清关服务，缩短交付周期。</p>
+                    <h4>香港直飛專線</h4>
+                    <p>依託香港國際樞紐優勢，提供極速空運及清關服務，縮短交付週期。</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-globe-asia"></i>
-                    <h4>全球门到门</h4>
-                    <p>覆盖全球主要电子产业基地，提供从工厂取货到仓库卸货的一站式服务。</p>
+                    <h4>全球門到門</h4>
+                    <p>覆蓋全球主要電子產業基地，提供從工廠取貨到倉庫卸貨的一站式服務。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 服务流程 -->
+    <!-- 服務流程 -->
     <section class="process" id="process">
         <div class="process-container">
-            <h3>ANDA 标准运输流程</h3>
+            <h3>ANDA 標準運輸流程</h3>
             <div class="steps">
                 <div class="step">
                     <span>1</span>
-                    <h4>需求咨询</h4>
-                    <p>了解货物特性、体积及时效要求。</p>
+                    <h4>需求諮詢</h4>
+                    <p>了解貨物特性、體積及時效要求。</p>
                 </div>
                 <div class="step">
                     <span>2</span>
-                    <h4>方案定制</h4>
-                    <p>根据电子元件类型定制专属包装与运输方案。</p>
+                    <h4>方案定製</h4>
+                    <p>根據電子元件類型定製專屬包裝與運輸方案。</p>
                 </div>
                 <div class="step">
                     <span>3</span>
-                    <h4>上门取件</h4>
-                    <p>专业团队上门打包、验货并安全装载。</p>
+                    <h4>上門取件</h4>
+                    <p>專業團隊上門打包、驗貨並安全裝載。</p>
                 </div>
                 <div class="step">
                     <span>4</span>
-                    <h4>在途追踪</h4>
-                    <p>实时GPS定位，全程可视化物流管理。</p>
+                    <h4>在途追蹤</h4>
+                    <p>實時GPS定位，全程可視化物流管理。</p>
                 </div>
                 <div class="step">
                     <span>5</span>
-                    <h4>交付签收</h4>
-                    <p>安全送达，签收确认，提供售后支持。</p>
+                    <h4>交付簽收</h4>
+                    <p>安全送達，簽收確認，提供售後支援。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 页脚 -->
+    <!-- 頁腳 -->
     <footer id="contact">
         <div class="footer-container">
             <div class="footer-about">
-                <h4>ANDA LOGISTICS</h4>
-                <p>香港专业电子元件运输专家，致力于为客户提供安全、高效、定制化的物流服务。</p>
-                <p><i class="fas fa-map-marker-alt"></i> 香港总部地址 (示例)</p>
+                <h4>ANDA INDUSTRIAL</h4>
+                <p>香港專業電子元件運輸專家，致力於為客戶提供安全、高效、定製化的物流服務。</p>
+                <p><i class="fas fa-map-marker-alt"></i> 香港總部地址（示例）</p>
                 <p><i class="fas fa-envelope"></i> info@andalogistics.com</p>
                 <p><i class="fas fa-phone"></i> +852 1234 5678</p>
             </div>
-            <div class="footer-form">
-                <h4>获取免费报价</h4>
+            <!-- <div class="footer-form">
+                <h4>獲取免費報價</h4>
                 <form>
                     <input type="text" placeholder="您的姓名" required>
-                    <input type="email" placeholder="电子邮箱" required>
-                    <textarea placeholder="货物描述及需求 (如: PCB板, 芯片, 重量/体积)"></textarea>
-                    <button type="submit">发送请求</button>
+                    <input type="email" placeholder="電子郵箱" required>
+                    <textarea placeholder="貨物描述及需求（如：PCB板、芯片、重量/體積）"></textarea>
+                    <button type="submit">發送請求</button>
                 </form>
-            </div>
+            </div> -->
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 ANDA Logistics. All Rights Reserved.</p>
+            <p>&copy; 2026 ANDA INDUSTRIAL. All Rights Reserved.</p>
         </div>
     </footer>
 
